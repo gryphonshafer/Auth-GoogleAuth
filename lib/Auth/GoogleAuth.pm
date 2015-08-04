@@ -155,8 +155,14 @@ __END__
     $auth->clear;
 
     my $url_0 = $auth->qr_code;
-    my $url_1 = $auth->qr_code( 'bv5o3disbutz4tl3', 'gryphon@cpan.org', 'Gryphon Shafer' );
-    my $url_2 = $auth->qr_code( 'bv5o3disbutz4tl3', 'gryphon@cpan.org', 'Gryphon Shafer', 1 );
+    my $url_1 = $auth->qr_code(
+        'bv5o3disbutz4tl3', # secret32
+        'gryphon@cpan.org', # key_id
+        'Gryphon Shafer',   # issuer
+    );
+    my $url_2 = $auth->qr_code(
+        'bv5o3disbutz4tl3', 'gryphon@cpan.org', 'Gryphon Shafer', 1,
+    );
 
     my $otpauth = $auth->otpauth;
 
@@ -164,7 +170,13 @@ __END__
     my $code_1 = $auth->code( 'utz4tl3bv5o3disb', 1438643789, 30 );
 
     my $verification_0 = $auth->verify('879364');
-    my $verification_1 = $auth->verify( '879364', 1, 'utz4tl3bv5o3disb', 1438643820, 30 );
+    my $verification_1 = $auth->verify(
+        '879364',           # code
+        1,                  # range
+        'utz4tl3bv5o3disb', # secret32
+        1438643820,         # timestamp (defaults to now)
+        30,                 # interval (default 30)
+    );
 
 =head1 DESCRIPTION
 
@@ -256,7 +268,9 @@ on the data either in the object or provided to this method.
 You can optionally add a final true value, and if you do, the method will
 return the generated otpauth key URI rather than the Google Chart API URL.
 
-    my $url_2 = $auth->qr_code( 'bv5o3disbutz4tl3', 'gryphon@cpan.org', 'Gryphon Shafer', 1 );
+    my $url_2 = $auth->qr_code(
+        'bv5o3disbutz4tl3', 'gryphon@cpan.org', 'Gryphon Shafer', 1,
+    );
 
 =head2 code
 
