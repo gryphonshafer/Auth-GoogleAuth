@@ -4,7 +4,7 @@ Auth::GoogleAuth - Google Authenticator TBOT Abstraction
 
 # VERSION
 
-version 1.01
+version 1.02
 
 [![Build Status](https://travis-ci.org/gryphonshafer/Auth-GoogleAuth.svg)](https://travis-ci.org/gryphonshafer/Auth-GoogleAuth)
 [![Coverage Status](https://coveralls.io/repos/gryphonshafer/Auth-GoogleAuth/badge.png)](https://coveralls.io/r/gryphonshafer/Auth-GoogleAuth)
@@ -230,7 +230,7 @@ Gryphon Shafer <gryphon@cpan.org>
 
 # COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2015 by Gryphon Shafer.
+This software is copyright (c) 2018 by Gryphon Shafer.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
