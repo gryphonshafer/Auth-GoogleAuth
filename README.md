@@ -4,7 +4,7 @@ Auth::GoogleAuth - Google Authenticator TBOT Abstraction
 
 # VERSION
 
-version 1.02
+version 1.03
 
 [![Build Status](https://travis-ci.org/gryphonshafer/Auth-GoogleAuth.svg)](https://travis-ci.org/gryphonshafer/Auth-GoogleAuth)
 [![Coverage Status](https://coveralls.io/repos/gryphonshafer/Auth-GoogleAuth/badge.png)](https://coveralls.io/r/gryphonshafer/Auth-GoogleAuth)
