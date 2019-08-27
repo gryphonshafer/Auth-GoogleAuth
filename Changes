@@ -1,6 +1,7 @@
 Revision history for Auth::GoogleAuth
 
 {{$NEXT}}
+        - Update Travis YAML
 
 1.02      2017-12-26 13:50:58-08:00 America/Los_Angeles
         - Adding Perl versions to test; annual general update for 2018
