@@ -335,9 +335,7 @@ You can look for additional information about this module at:
 
 =for :list
 * L<GitHub|https://github.com/gryphonshafer/Auth-GoogleAuth>
-* L<CPAN|http://search.cpan.org/dist/Auth-GoogleAuth>
 * L<MetaCPAN|https://metacpan.org/pod/Auth::GoogleAuth>
-* L<AnnoCPAN|http://annocpan.org/dist/Auth-GoogleAuth>
 * L<Travis CI|https://travis-ci.org/gryphonshafer/Auth-GoogleAuth>
 * L<Coveralls|https://coveralls.io/r/gryphonshafer/Auth-GoogleAuth>
 * L<CPANTS|http://cpants.cpanauthors.org/dist/Auth-GoogleAuth>
