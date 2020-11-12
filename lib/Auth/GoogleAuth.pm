@@ -129,8 +129,8 @@ __END__
 =begin :badges
 
 =for markdown
-[![Build Status](https://travis-ci.org/gryphonshafer/Auth-GoogleAuth.svg)](https://travis-ci.org/gryphonshafer/Auth-GoogleAuth)
-[![Coverage Status](https://coveralls.io/repos/gryphonshafer/Auth-GoogleAuth/badge.png)](https://coveralls.io/r/gryphonshafer/Auth-GoogleAuth)
+[![build](https://github.com/gryphonshafer/Auth-GoogleAuth/workflows/build/badge.svg)](https://github.com/gryphonshafer/Auth-GoogleAuth/actions?query=workflow%3Abuild)
+[![codecov](https://codecov.io/gh/gryphonshafer/Auth-GoogleAuth/graph/badge.svg)](https://codecov.io/gh/gryphonshafer/Auth-GoogleAuth)
 
 =end :badges
 
@@ -336,8 +336,8 @@ You can look for additional information about this module at:
 =for :list
 * L<GitHub|https://github.com/gryphonshafer/Auth-GoogleAuth>
 * L<MetaCPAN|https://metacpan.org/pod/Auth::GoogleAuth>
-* L<Travis CI|https://travis-ci.org/gryphonshafer/Auth-GoogleAuth>
-* L<Coveralls|https://coveralls.io/r/gryphonshafer/Auth-GoogleAuth>
+* L<GitHub Actions|https://github.com/gryphonshafer/Auth-GoogleAuth/actions>
+* L<Codecov|https://codecov.io/gh/gryphonshafer/Auth-GoogleAuth>
 * L<CPANTS|http://cpants.cpanauthors.org/dist/Auth-GoogleAuth>
 * L<CPAN Testers|http://www.cpantesters.org/distro/G/Auth-GoogleAuth.html>
 
