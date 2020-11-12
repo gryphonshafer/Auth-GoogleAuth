@@ -13,7 +13,7 @@ jobs:
       - uses: actions/checkout@v2
       - uses: perl-actions/install-with-cpanm@v1
         env:
-          PERL_CPANM_OPT: --from https://cpan.metacpan.org/ --quiet --notest --force --skip-satisfied
+          PERL_CPANM_OPT: --from https://cpan.metacpan.org/ --notest --force --skip-satisfied
         with:
           sudo: false
           args: --with-develop --with-all-features --installdeps .

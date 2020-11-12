@@ -1,6 +1,8 @@
 Revision history for Auth::GoogleAuth
 
 {{$NEXT}}
+        - Migrate Travis CI and Coveralls to GitHub Actions and Codecov
+        - Update copyright year
         - Update Travis YAML
 
 1.02      2017-12-26 13:50:58-08:00 America/Los_Angeles

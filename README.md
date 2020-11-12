@@ -6,8 +6,8 @@ Auth::GoogleAuth - Google Authenticator TBOT Abstraction
 
 version 1.03
 
-[![Build Status](https://travis-ci.org/gryphonshafer/Auth-GoogleAuth.svg)](https://travis-ci.org/gryphonshafer/Auth-GoogleAuth)
-[![Coverage Status](https://coveralls.io/repos/gryphonshafer/Auth-GoogleAuth/badge.png)](https://coveralls.io/r/gryphonshafer/Auth-GoogleAuth)
+[![build](https://github.com/gryphonshafer/Auth-GoogleAuth/workflows/build/badge.svg)](https://github.com/gryphonshafer/Auth-GoogleAuth/actions?query=workflow%3Abuild)
+[![codecov](https://codecov.io/gh/gryphonshafer/Auth-GoogleAuth/graph/badge.svg)](https://codecov.io/gh/gryphonshafer/Auth-GoogleAuth)
 
 # SYNOPSIS
 
@@ -201,19 +201,17 @@ or some small range like 1.
 
 # DEPENDENCIES
 
-[Digest::HMAC\_SHA1](https://metacpan.org/pod/Digest::HMAC_SHA1), [Math::Random::MT](https://metacpan.org/pod/Math::Random::MT), [URI::Escape](https://metacpan.org/pod/URI::Escape), [Convert::Base32](https://metacpan.org/pod/Convert::Base32),
-[Class::Accessor](https://metacpan.org/pod/Class::Accessor), [Carp](https://metacpan.org/pod/Carp).
+[Digest::HMAC\_SHA1](https://metacpan.org/pod/Digest%3A%3AHMAC_SHA1), [Math::Random::MT](https://metacpan.org/pod/Math%3A%3ARandom%3A%3AMT), [URI::Escape](https://metacpan.org/pod/URI%3A%3AEscape), [Convert::Base32](https://metacpan.org/pod/Convert%3A%3ABase32),
+[Class::Accessor](https://metacpan.org/pod/Class%3A%3AAccessor), [Carp](https://metacpan.org/pod/Carp).
 
 # SEE ALSO
 
 You can look for additional information about this module at:
 
 - [GitHub](https://github.com/gryphonshafer/Auth-GoogleAuth)
-- [CPAN](http://search.cpan.org/dist/Auth-GoogleAuth)
 - [MetaCPAN](https://metacpan.org/pod/Auth::GoogleAuth)
-- [AnnoCPAN](http://annocpan.org/dist/Auth-GoogleAuth)
-- [Travis CI](https://travis-ci.org/gryphonshafer/Auth-GoogleAuth)
-- [Coveralls](https://coveralls.io/r/gryphonshafer/Auth-GoogleAuth)
+- [GitHub Actions](https://github.com/gryphonshafer/Auth-GoogleAuth/actions)
+- [Codecov](https://codecov.io/gh/gryphonshafer/Auth-GoogleAuth)
 - [CPANTS](http://cpants.cpanauthors.org/dist/Auth-GoogleAuth)
 - [CPAN Testers](http://www.cpantesters.org/distro/G/Auth-GoogleAuth.html)
 
@@ -230,7 +228,7 @@ Gryphon Shafer <gryphon@cpan.org>
 
 # COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2018 by Gryphon Shafer.
+This software is copyright (c) 2021 by Gryphon Shafer.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
