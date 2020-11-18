@@ -129,7 +129,7 @@ __END__
 =begin :badges
 
 =for markdown
-[![build](https://github.com/gryphonshafer/Auth-GoogleAuth/workflows/build/badge.svg)](https://github.com/gryphonshafer/Auth-GoogleAuth/actions?query=workflow%3Abuild)
+[![test](https://github.com/gryphonshafer/Auth-GoogleAuth/workflows/test/badge.svg)](https://github.com/gryphonshafer/Auth-GoogleAuth/actions?query=workflow%3Atest)
 [![codecov](https://codecov.io/gh/gryphonshafer/Auth-GoogleAuth/graph/badge.svg)](https://codecov.io/gh/gryphonshafer/Auth-GoogleAuth)
 
 =end :badges
