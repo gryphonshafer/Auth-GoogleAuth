@@ -31,9 +31,8 @@ my %WriteMakefileArgs = (
     "File::Spec" => 0,
     "IO::Handle" => 0,
     "IPC::Open3" => 0,
-    "Test::More" => 0,
-    "Test::Most" => 0,
-    "constant" => 0
+    "Test2::V0" => 0,
+    "Test::More" => 0
   },
   "VERSION" => "1.03",
   "test" => {
@@ -51,11 +50,10 @@ my %FallbackPrereqs = (
   "IO::Handle" => 0,
   "IPC::Open3" => 0,
   "Math::Random::MT" => 0,
+  "Test2::V0" => 0,
   "Test::More" => 0,
-  "Test::Most" => 0,
   "URI::Escape" => 0,
   "base" => 0,
-  "constant" => 0,
   "strict" => 0,
   "warnings" => 0
 );

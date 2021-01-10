@@ -1,6 +1,7 @@
 Revision history for Auth::GoogleAuth
 
 {{$NEXT}}
+        - Migrate to Test2::V0
         - Improve .gitignore file
         - License migrate to Artistic 2.0
         - Migrate Travis CI and Coveralls to GitHub Actions and Codecov
