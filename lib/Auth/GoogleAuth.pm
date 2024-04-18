@@ -48,7 +48,7 @@ sub qr_code {
 
     return ($return_otpauth)
         ? $self->otpauth
-        : 'https://chart.googleapis.com/chart?chs=200x200&cht=qr&chl=' . uri_escape( $self->otpauth );
+        : 'https://quickchart.io/chart?chs=200x200&cht=qr&chl=' . uri_escape( $self->otpauth );
 }
 
 sub code {
@@ -256,7 +256,7 @@ all attribute values.
 
 =head2 qr_code
 
-This method will return a Google Chart API URL that will return a QR code based
+This method will return a Quick Chart API URL that will return a QR code based
 on the data either in the object or provided to this method.
 
     my $url_0 = $auth->qr_code;
@@ -267,7 +267,7 @@ on the data either in the object or provided to this method.
     );
 
 You can optionally add a final true value, and if you do, the method will
-return the generated otpauth key URI rather than the Google Chart API URL.
+return the generated otpauth key URI rather than the Quick Chart API URL.
 
     my $url_2 = $auth->qr_code(
         'bv5o3disbutz4tl3', 'gryphon@cpan.org', 'Gryphon Shafer', 1,
@@ -348,5 +348,6 @@ You can look for additional information about things related to this module at:
 * L<RFC 6238|http://tools.ietf.org/html/rfc6238>
 * L<Google Authenticator|https://en.wikipedia.org/wiki/Google_Authenticator>
 * L<Google Authenticator GitHub|https://github.com/google/google-authenticator>
+* L<Quick Chart QR Codes|https://quickchart.io/documentation/qr-codes>
 
 =cut
