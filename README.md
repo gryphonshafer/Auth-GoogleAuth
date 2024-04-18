@@ -4,7 +4,7 @@ Auth::GoogleAuth - Google Authenticator TBOT Abstraction
 
 # VERSION
 
-version 1.04
+version 1.05
 
 [![test](https://github.com/gryphonshafer/Auth-GoogleAuth/workflows/test/badge.svg)](https://github.com/gryphonshafer/Auth-GoogleAuth/actions?query=workflow%3Atest)
 [![codecov](https://codecov.io/gh/gryphonshafer/Auth-GoogleAuth/graph/badge.svg)](https://codecov.io/gh/gryphonshafer/Auth-GoogleAuth)
@@ -131,7 +131,7 @@ all attribute values.
 
 ## qr\_code
 
-This method will return a Google Chart API URL that will return a QR code based
+This method will return a Quick Chart API URL that will return a QR code based
 on the data either in the object or provided to this method.
 
     my $url_0 = $auth->qr_code;
@@ -142,7 +142,7 @@ on the data either in the object or provided to this method.
     );
 
 You can optionally add a final true value, and if you do, the method will
-return the generated otpauth key URI rather than the Google Chart API URL.
+return the generated otpauth key URI rather than the Quick Chart API URL.
 
     my $url_2 = $auth->qr_code(
         'bv5o3disbutz4tl3', 'gryphon@cpan.org', 'Gryphon Shafer', 1,
@@ -221,6 +221,7 @@ You can look for additional information about things related to this module at:
 - [RFC 6238](http://tools.ietf.org/html/rfc6238)
 - [Google Authenticator](https://en.wikipedia.org/wiki/Google_Authenticator)
 - [Google Authenticator GitHub](https://github.com/google/google-authenticator)
+- [Quick Chart QR Codes](https://quickchart.io/documentation/qr-codes)
 
 # AUTHOR
 
