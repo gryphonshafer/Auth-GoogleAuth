@@ -4,7 +4,7 @@ Auth::GoogleAuth - Google Authenticator TBOT Abstraction
 
 # VERSION
 
-version 1.05
+version 1.06
 
 [![test](https://github.com/gryphonshafer/Auth-GoogleAuth/workflows/test/badge.svg)](https://github.com/gryphonshafer/Auth-GoogleAuth/actions?query=workflow%3Atest)
 [![codecov](https://codecov.io/gh/gryphonshafer/Auth-GoogleAuth/graph/badge.svg)](https://codecov.io/gh/gryphonshafer/Auth-GoogleAuth)
@@ -28,7 +28,12 @@ version 1.05
 
     my $secret32 = $auth->generate_secret32;
 
-    $auth->clear;
+    my $otpauth_0 = $auth->otpauth;
+    my $otpauth_1 = $auth->otpauth(
+        'bv5o3disbutz4tl3', # secret32
+        'gryphon@cpan.org', # key_id
+        'Gryphon Shafer',   # issuer
+    );
 
     my $url_0 = $auth->qr_code;
     my $url_1 = $auth->qr_code(
@@ -39,8 +44,6 @@ version 1.05
     my $url_2 = $auth->qr_code(
         'bv5o3disbutz4tl3', 'gryphon@cpan.org', 'Gryphon Shafer', 1,
     );
-
-    my $otpauth = $auth->otpauth;
 
     my $code_0 = $auth->code;
     my $code_1 = $auth->code( 'utz4tl3bv5o3disb', 1438643789, 30 );
@@ -53,6 +56,8 @@ version 1.05
         1438643820,         # timestamp (defaults to now)
         30,                 # interval (default 30)
     );
+
+    $auth->clear;
 
 # DESCRIPTION
 
@@ -109,11 +114,6 @@ See the
 [key URI format wiki page](https://github.com/google/google-authenticator/wiki/Key-Uri-Format)
 for more information.
 
-### otpauth
-
-This method returns the otpauth key URI generated when you call
-`qr_code`.
-
 ## generate\_secret32
 
 This method will generate a reasonable random "secret32" value, store it in the
@@ -121,13 +121,16 @@ get/set method, and return it.
 
     my $secret32 = $auth->generate_secret32;
 
-## clear
+## otpauth
 
-Given that the "secret" and "secret32" values may persist in this object, which
-could be a bad idea in some contexts, this `clear` method lets your clear out
-all attribute values.
+This method returns a generated otpauth key URI.
 
-    $auth->clear;
+    my $otpauth_0 = $auth->otpauth;
+    my $otpauth_1 = $auth->otpauth(
+        'bv5o3disbutz4tl3', # secret32
+        'gryphon@cpan.org', # key_id
+        'Gryphon Shafer',   # issuer
+    );
 
 ## qr\_code
 
@@ -185,6 +188,14 @@ a code based on a time 1 iteration plus or minus should verify.
         1438643820,         # timestamp (defaults to now)
         30,                 # interval (default 30)
     );
+
+## clear
+
+Given that the "secret" and "secret32" values may persist in this object, which
+could be a bad idea in some contexts, this `clear` method lets your clear out
+all attribute values.
+
+    $auth->clear;
 
 # TYPICAL USE-CASE
 
