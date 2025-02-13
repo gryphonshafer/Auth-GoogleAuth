@@ -4,13 +4,13 @@ jobs:
     test:
         runs-on: ubuntu-latest
         strategy:
-            fail-fast: false
+            fail-fast: true
             matrix:
                 perl-version: [ devel, 38, 36, 34, 32, 30, 28, 26, 24, 22, 18, 16, 14, 12, 10 ]
         container:
             image: |
                 perldocker/perl-tester:${{
-                    contains( matrix.perl-version, 'a-zA-Z' )
+                    contains( matrix.perl-version, '[a-zA-Z]' )
                         && matrix.perl-version
                         || format( '5.{0}', matrix.perl-version )
                 }}
