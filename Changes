@@ -1,6 +1,7 @@
 Revision history for Auth::GoogleAuth
 
 {{$NEXT}}
+        - Perl minimum version align
 
 1.06      2025-02-11 09:13:33-08:00 America/Los_Angeles
         - Can now call otpauth without first calling qr_code
