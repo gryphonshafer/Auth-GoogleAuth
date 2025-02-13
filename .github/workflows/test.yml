@@ -9,14 +9,15 @@ jobs:
                 # perl-version: [ devel, 40, 38, 36, 34, 32, 30, 28, 26, 24, 22, 18, 16, 14, 12, 10 ]
                 perl-version: [ devel, 40, 38, 12, 10 ]
         container:
-            image: |
+            # image: perldocker/perl-tester:5.${{ matrix.perl-version }}
+            image: |-
                 perldocker/perl-tester:${{
                     contains( matrix.perl-version, 'd' )
                         && matrix.perl-version
                         || format( '5.{0}', matrix.perl-version )
                 }}
         env:
-            PERL_CPANM_OPT: |
+            PERL_CPANM_OPT: |-
                 --from https://cpan.metacpan.org
                 --notest
                 --force
