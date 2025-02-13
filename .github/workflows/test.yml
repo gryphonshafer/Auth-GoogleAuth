@@ -6,10 +6,8 @@ jobs:
         strategy:
             fail-fast: false
             matrix:
-                # perl-version: [ devel, 40, 38, 36, 34, 32, 30, 28, 26, 24, 22, 18, 16, 14, 12, 10 ]
-                perl-version: [ devel, 40, 38, 12, 10 ]
+                perl-version: [ devel, 40, 38, 36, 34, 32, 30, 28, 26, 24, 22, 18, 16, 14, 12, 10 ]
         container:
-            # image: perldocker/perl-tester:5.${{ matrix.perl-version }}
             image: |-
                 perldocker/perl-tester:${{
                     contains( matrix.perl-version, 'd' )
@@ -29,8 +27,6 @@ jobs:
             CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
         steps:
             - uses: actions/checkout@v4
-            # - uses: perl-actions/install-with-cpanm@v1
-            #   with: { sudo: false, args: ../omniframe/. }
             - uses: perl-actions/install-with-cpanm@v1
               with: { sudo: false, args: . }
             - run: prove --recurse --lib --failures --jobs 4 --timer t
