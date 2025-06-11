@@ -4,7 +4,7 @@ Auth::GoogleAuth - Google Authenticator TBOT Abstraction
 
 # VERSION
 
-version 1.07
+version 1.08
 
 [![test](https://github.com/gryphonshafer/Auth-GoogleAuth/workflows/test/badge.svg)](https://github.com/gryphonshafer/Auth-GoogleAuth/actions?query=workflow%3Atest)
 [![codecov](https://codecov.io/gh/gryphonshafer/Auth-GoogleAuth/graph/badge.svg)](https://codecov.io/gh/gryphonshafer/Auth-GoogleAuth)
@@ -197,6 +197,11 @@ all attribute values.
 
     $auth->clear;
 
+## urand
+
+This method is a functional replacement of the core `rand` but using
+[Crypt::URandom](https://metacpan.org/pod/Crypt%3A%3AURandom) for randomness.
+
 # TYPICAL USE-CASE
 
 Typically, you're probably going to want to either randomly generate a secret or
@@ -209,11 +214,6 @@ for setup.
 To authenticate, present the user with a way to provide you a code (which will
 be a series of 6-digits). Verify that code (`verify`) with either no range
 or some small range like 1.
-
-# DEPENDENCIES
-
-[Digest::HMAC\_SHA1](https://metacpan.org/pod/Digest%3A%3AHMAC_SHA1), [Math::Random::MT](https://metacpan.org/pod/Math%3A%3ARandom%3A%3AMT), [URI::Escape](https://metacpan.org/pod/URI%3A%3AEscape), [Convert::Base32](https://metacpan.org/pod/Convert%3A%3ABase32),
-[Class::Accessor](https://metacpan.org/pod/Class%3A%3AAccessor), [Carp](https://metacpan.org/pod/Carp).
 
 # SEE ALSO
 
