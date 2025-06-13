@@ -9,7 +9,7 @@ use base 'Class::Accessor';
 
 use Carp 'croak';
 use Convert::Base32 qw( encode_base32 decode_base32 );
-use Crypt::URandom;
+use Crypt::PRNG 'rand';
 use Digest::HMAC_SHA1 'hmac_sha1_hex';
 use URI::Escape 'uri_escape';
 
@@ -18,17 +18,10 @@ use URI::Escape 'uri_escape';
 my @accessors = qw( secret secret32 issuer key_id );
 __PACKAGE__->mk_accessors(@accessors);
 
-sub urand {
-    my ($max) = @_;
-    $max = 1 unless defined $max;
-    $max = abs($max);
-    return unpack( 'Q>', Crypt::URandom::urandom(8) ) / ( 2 ** 64 ) * $max;
-}
-
 sub generate_secret32 {
     my ($self) = @_;
     my @chars = ( 'a' .. 'z', 2 .. 7 );
-    return $self->secret32( join( '', @chars[ map { urand( scalar(@chars) ) } 1 .. 16 ] ) );
+    return $self->secret32( join( '', @chars[ map { rand( scalar(@chars) ) } 1 .. 16 ] ) );
 }
 
 sub clear {
@@ -332,11 +325,6 @@ could be a bad idea in some contexts, this C<clear> method lets your clear out
 all attribute values.
 
     $auth->clear;
-
-=head2 urand
-
-This method is a functional replacement of the core C<rand> but using
-L<Crypt::URandom> for randomness.
 
 =head1 TYPICAL USE-CASE
 
