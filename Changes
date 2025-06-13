@@ -1,6 +1,8 @@
 Revision history for Auth::GoogleAuth
 
 {{$NEXT}}
+
+1.09      2025-06-13 10:22:04-07:00 America/Los_Angeles
         - Add security policy as per CPANSec recommendation
         - Switch Crypt::URandom for Crypt::PRNG for rand
 
