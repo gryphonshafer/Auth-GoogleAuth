@@ -146,8 +146,8 @@ __END__
 
     $auth = Auth::GoogleAuth->new({
         secret => 'some secret string thing',
-        issuer => 'Gryphon Shafer',
-        key_id => 'gryphon@cpan.org',
+        issuer => 'Example User',
+        key_id => 'user@example.com',
     });
 
     $auth->secret();   # get/set
@@ -160,18 +160,18 @@ __END__
     my $otpauth_0 = $auth->otpauth;
     my $otpauth_1 = $auth->otpauth(
         'bv5o3disbutz4tl3', # secret32
-        'gryphon@cpan.org', # key_id
-        'Gryphon Shafer',   # issuer
+        'user@example.com', # key_id
+        'Example User',   # issuer
     );
 
     my $url_0 = $auth->qr_code;
     my $url_1 = $auth->qr_code(
         'bv5o3disbutz4tl3', # secret32
-        'gryphon@cpan.org', # key_id
-        'Gryphon Shafer',   # issuer
+        'user@example.com', # key_id
+        'Example User',   # issuer
     );
     my $url_2 = $auth->qr_code(
-        'bv5o3disbutz4tl3', 'gryphon@cpan.org', 'Gryphon Shafer', 1,
+        'bv5o3disbutz4tl3', 'user@example.com', 'Example User', 1,
     );
 
     my $code_0 = $auth->code;
@@ -211,8 +211,8 @@ This is a simple instantiator to which you can pass optional default values.
 
     $auth = Auth::GoogleAuth->new({
         secret => 'some secret string thing',
-        issuer => 'Gryphon Shafer',
-        key_id => 'gryphon@cpan.org',
+        issuer => 'Example User',
+        key_id => 'user@example.com',
     });
 
 The object returned will support the following attribute get/set methods:
@@ -257,8 +257,8 @@ This method returns a generated otpauth key URI.
     my $otpauth_0 = $auth->otpauth;
     my $otpauth_1 = $auth->otpauth(
         'bv5o3disbutz4tl3', # secret32
-        'gryphon@cpan.org', # key_id
-        'Gryphon Shafer',   # issuer
+        'user@example.com', # key_id
+        'Example User',     # issuer
     );
 
 =head2 qr_code
@@ -269,15 +269,15 @@ on the data either in the object or provided to this method.
     my $url_0 = $auth->qr_code;
     my $url_1 = $auth->qr_code(
         'bv5o3disbutz4tl3', # secret32
-        'gryphon@cpan.org', # key_id
-        'Gryphon Shafer',   # issuer
+        'user@example.com', # key_id
+        'Example User',     # issuer
     );
 
 You can optionally add a final true value, and if you do, the method will
 return the generated otpauth key URI rather than the Quick Chart API URL.
 
     my $url_2 = $auth->qr_code(
-        'bv5o3disbutz4tl3', 'gryphon@cpan.org', 'Gryphon Shafer', 1,
+        'bv5o3disbutz4tl3', 'user@example.com', 'Example User', 1,
     );
 
 =head2 code
