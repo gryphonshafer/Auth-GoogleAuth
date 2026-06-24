@@ -4,7 +4,7 @@ Auth::GoogleAuth - Google Authenticator TBOT Abstraction
 
 # VERSION
 
-version 1.10
+version 1.11
 
 [![test](https://github.com/gryphonshafer/Auth-GoogleAuth/workflows/test/badge.svg)](https://github.com/gryphonshafer/Auth-GoogleAuth/actions?query=workflow%3Atest)
 [![codecov](https://codecov.io/gh/gryphonshafer/Auth-GoogleAuth/graph/badge.svg)](https://codecov.io/gh/gryphonshafer/Auth-GoogleAuth)
